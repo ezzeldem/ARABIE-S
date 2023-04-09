@@ -1,0 +1,48 @@
+.title-font {
+  font-family: var(--font);
+}
+
+.prag {
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-primary;
+}
+
+.title-box {
+  &.text-center {
+    .title {
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);  
+      }
+    }
+  }
+  &.white-font{
+    .title {
+      color: $color-white;
+      &:after {
+        background-color: $color-white;
+      }
+  }
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-secondary;
+    padding-bottom: 12px;
+    display: inline-block;
+    margin: 0 0 12px;
+    @include after("") {
+      bottom: 0;
+      left: 0%;
+
+      width: 50%;
+      height: 4px;
+      background-color: $color-secondary;
+      border-radius: 5px 0 5px 0;
+    }
+  }
+  .prag {
+    font-size: 16px;
+  }
+}
