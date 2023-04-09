@@ -1,0 +1,13 @@
+$color-primary: #5f5f61;
+$color-secondary: #bb9d76;
+$color-gray: #888;
+$color-black: #000;
+$color-white: #fff;
+
+:root {
+  --font: "Dosis", sans-serif;
+}
+
+html [dir="rtl"] {
+  --font: "Baloo Bhaijaan 2", cursive;
+}

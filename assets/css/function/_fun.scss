@@ -1,0 +1,11 @@
+@mixin dir($dir) {
+  html[dir="#{$dir}"] & {
+    @content;
+  }
+}
+@mixin hover($trans) {
+  transition: #{$trans}s all ease-in-out;
+  &:hover {
+    @content;
+  }
+}

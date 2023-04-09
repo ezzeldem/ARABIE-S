@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+:root {
+  --font: "Dosis", sans-serif;
+}
+
+html [dir=rtl] {
+  --font: "Baloo Bhaijaan 2", cursive;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+html[dir=rtl] body {
+  font-family: "El Messiri", sans-serif;
+}
+html[dir=ltr] body {
+  font-family: "Gothic A1";
+}
+
+.overlay {
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  position: fixed;
+  z-index: 99;
+  display: none;
+}
+
+.header-section {
+  padding: 24px 0;
+}
+.header-section .logo-box a img {
+  height: 60px;
+}
+.header-section .nav-box {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+.header-section .nav-box .button-box:first-of-type {
+  padding: 0 12px;
+}
+.header-section .nav-box ul {
+  justify-content: flex-end;
+  display: flex;
+}
+.header-section .nav-box ul li {
+  padding: 0 12px;
+}
+.header-section .nav-box ul li a {
+  font-size: 16px;
+  font-weight: 800;
+  color: #5f5f61;
+  transition: 0.2s all ease-in-out;
+}
+.header-section .nav-box ul li a:hover {
+  color: #bb9d76;
+}
+
+.button-box.border-item a {
+  background-color: transparent;
+  color: #5f5f61;
+  transition: 0.2s all ease-in-out;
+}
+.button-box.border-item a:hover {
+  background-color: #5f5f61;
+  color: #fff;
+}
+.button-box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  background-color: #bb9d76;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: var(--font);
+  border: 1px solid #bb9d76;
+  transition: 0.2s all ease-in-out;
+}
+html[dir=ltr] .button-box a {
+  letter-spacing: 1px;
+}
+.button-box a:hover {
+  border: 1px solid #5f5f61;
+  background-color: #5f5f61;
+}

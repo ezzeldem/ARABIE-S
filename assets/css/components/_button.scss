@@ -1,0 +1,33 @@
+.button-box {
+  &.border-item {
+    a {
+      background-color: transparent;
+      color: $color-primary;
+      @include hover(0.2) {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background-color: $color-secondary;
+    width: fit-content;
+    color: $color-white;
+    font-size: 17px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: var(--font);
+    border: 1px solid $color-secondary;
+    @include dir(ltr) {
+      letter-spacing: 1px;
+    }
+    @include hover(0.2) {
+      border: 1px solid $color-primary;
+      background-color: $color-primary;
+    }
+  }
+}
