@@ -59,36 +59,76 @@
 
 .register-section {
   padding: 60px 0;
-  background-image: url("../img/register.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgba($color-secondary, 0.1);
   position: relative;
-  .student-img {
-    position: absolute;
-    bottom: 0;
-    left: 2px;
-    height: 200px;
-  }
   .register-box {
+    padding: 40px 24px 0;
+    border: 1px solid rgba($color-secondary, 1);
     text-align: center;
-    @include dir(rtl) {
-      border-right: 1px solid $color-white;
-    }
-    @include dir(ltr) {
-      border-left: 1px solid $color-white;
-    }
+    border-radius: 10px;
     &.border-0 {
       border: 0 !important;
     }
     .title {
       font-size: 28px;
-      color: rgba($color-white, 1);
+      color: rgba($color-black, 1);
+    }
+    .prag {
+      font-size: 13px;
+      width: 80%;
+      margin: 12px auto;
     }
     .button-box {
-      margin: 24px auto 0;
+      margin: 0 auto 24px;
       a {
         margin: 0 auto;
         width: 50%;
+      }
+    }
+    img {
+      height: 200px;
+    }
+  }
+}
+
+.event-section {
+  .event-slider {
+    .event-slider-item {
+      width: calc(100% - 20px) !important;
+      .event-box {
+        overflow: hidden;
+        border-radius: 10px;
+        border: 1px solid rgba($color-black, 0.1);
+        .img-box {
+          img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+        .event-box-content {
+          padding: 12px;
+          .title {
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba($color-primary, 1);
+          }
+          .prag {
+            padding: 12px 0;
+            color: rgba($color-black, 1);
+          }
+          .more {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba($color-secondary, 1);
+            i {
+              padding: 0 10px;
+            }
+            @include hover(0.2) {
+              color: rgba($color-primary, 1);
+            }
+          }
+        }
       }
     }
   }
