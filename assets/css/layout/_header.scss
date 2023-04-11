@@ -31,5 +31,77 @@
         }
       }
     }
+    .menu-box {
+      @include dir(rtl) {
+        padding-right: 24px;
+      }
+      @include dir(ltr) {
+        padding-left: 24px;
+      }
+      i {
+        cursor: pointer;
+        font-size: 25px;
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+.menu-content {
+  position: fixed;
+  z-index: 9999;
+  background-color: #333;
+  inset: 0;
+  padding: 40px 0;
+  opacity: 0;
+  visibility: hidden;
+  @include hover(0.2);
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    .nav-box {
+      ul {
+        li {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .img-logo {
+    z-index: -1;
+    opacity: 0.05;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .close-link {
+    padding-bottom: 40px;
+    text-align: end;
+    h4 {
+      cursor: pointer;
+      color: $color-white;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .nav-box {
+    ul {
+      li {
+        padding-bottom: 24px;
+        @include hover(0.3);
+        transform: translateY(20px);
+        opacity: 0.6;
+        a {
+          font-size: 20px;
+          font-weight: 600;
+          color: $color-white;
+          @include hover(0.2) {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
   }
 }

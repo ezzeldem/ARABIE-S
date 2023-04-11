@@ -53,11 +53,11 @@ html[dir=ltr] body {
 }
 
 .section-padding {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .section-margin {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .header-section {
@@ -88,6 +88,69 @@ html[dir=ltr] body {
   transition: 0.2s all ease-in-out;
 }
 .header-section .nav-box ul li a:hover {
+  color: #bb9d76;
+}
+html[dir=rtl] .header-section .nav-box .menu-box {
+  padding-right: 24px;
+}
+html[dir=ltr] .header-section .nav-box .menu-box {
+  padding-left: 24px;
+}
+.header-section .nav-box .menu-box i {
+  cursor: pointer;
+  font-size: 25px;
+  color: #bb9d76;
+}
+
+.menu-content {
+  position: fixed;
+  z-index: 9999;
+  background-color: #333;
+  inset: 0;
+  padding: 40px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s all ease-in-out;
+}
+.menu-content.open {
+  opacity: 1;
+  visibility: visible;
+}
+.menu-content.open .nav-box ul li {
+  transform: translateY(0);
+  opacity: 1;
+}
+.menu-content .img-logo {
+  z-index: -1;
+  opacity: 0.05;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu-content .close-link {
+  padding-bottom: 40px;
+  text-align: end;
+}
+.menu-content .close-link h4 {
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.menu-content .nav-box ul li {
+  padding-bottom: 24px;
+  transition: 0.3s all ease-in-out;
+  transform: translateY(20px);
+  opacity: 0.6;
+}
+.menu-content .nav-box ul li a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.2s all ease-in-out;
+}
+.menu-content .nav-box ul li a:hover {
   color: #bb9d76;
 }
 
@@ -172,50 +235,6 @@ html[dir=ltr] .copy-right-footer ul li {
   padding: 24px 0;
 }
 
-.mission-section .mission-box {
-  background-image: url("../img/bg-img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 24px;
-  border-radius: 30px 0 30px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  z-index: 1;
-  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-.mission-section .mission-box::after {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.mission-section .mission-box .title {
-  padding: 0 0 12px;
-  font-size: 40px;
-  font-weight: 700;
-  color: #fff;
-}
-.mission-section .mission-box .prag {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-}
-.mission-section .objective-box .objective-title {
-  font-size: 24px;
-  font-weight: 500;
-  color: black;
-  padding-bottom: 12px;
-}
-.mission-section .objective-box .prag {
-  text-align: justify;
-  font-size: 13px;
-}
-
 .register-section {
   padding: 60px 0;
   background-color: rgba(187, 157, 118, 0.1);
@@ -287,6 +306,123 @@ html[dir=ltr] .copy-right-footer ul li {
 }
 .event-section .event-slider .event-slider-item .event-box .event-box-content .more:hover {
   color: #5f5f61;
+}
+
+.tutor-section .tutor-slider .tutor-slider-item {
+  width: calc(100% - 20px) !important;
+}
+.tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box {
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+html[dir=rtl] .tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .img-box {
+  padding-left: 24px;
+}
+html[dir=ltr] .tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .img-box {
+  padding-right: 24px;
+}
+.tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .img-box img {
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .name {
+  font-size: 22px;
+  color: black;
+  font-weight: 600;
+}
+.tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .prag {
+  padding: 12px 0 4px;
+  font-size: 14px;
+}
+.tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #bb9d76;
+}
+.tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .link {
+  margin-top: 12px;
+  font-size: 15px;
+  border: 1px solid #5f5f61;
+  color: #5f5f61;
+  padding: 6px 12px;
+  display: inline-block;
+  transition: 0.2s all ease-in-out;
+}
+.tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item-box .link:hover {
+  background-color: #5f5f61;
+  color: white;
+}
+
+.mission-section .min-box {
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.mission-section .min-box img {
+  height: 80px;
+}
+.mission-section .min-box .title {
+  font-size: 20px;
+  padding: 12px 0;
+  font-weight: 800;
+  color: #bb9d76;
+}
+.mission-section .min-box .prag {
+  font-size: 14px;
+}
+.mission-section .mission-box {
+  background-image: url("../img/bg-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 24px;
+  border-radius: 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 1;
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.mission-section .mission-box::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.mission-section .mission-box .title {
+  padding: 0 0 12px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+.mission-section .mission-box .prag {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.mission-section .objective-box .objective-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  padding-bottom: 12px;
+}
+.mission-section .objective-box .prag {
+  text-align: justify;
+  font-size: 13px;
 }
 
 .title-font {
@@ -364,4 +500,15 @@ html[dir=ltr] .button-box a {
 .button-box a:hover {
   border: 1px solid #5f5f61;
   background-color: #5f5f61;
+}
+
+.intro-section {
+  padding: 60px 0;
+  background-image: url("../img/bg-img.png");
+  text-align: center;
+}
+.intro-section .title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
 }

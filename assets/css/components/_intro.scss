@@ -1,0 +1,10 @@
+.intro-section {
+  padding: 60px 0;
+  background-image: url("../img/bg-img.png");
+  text-align: center;
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $color-white;
+  }
+}

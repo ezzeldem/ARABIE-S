@@ -5,6 +5,34 @@ $(document).ready(function () {
     var dir_lang = false;
   }
 
+  $(".header-section .nav-box .menu-box i").click(function () {
+    $(".menu-content").addClass("open");
+  });
+  $(".menu-content .close-link h4").click(function () {
+    $(".menu-content").removeClass("open");
+  });
+
+  $(".tutor-slider").slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    rtl: dir_lang,
+    dots: false,
+    adaptiveHeight: true,
+    autoplaySpeed: 1700,
+    responsive: [
+      {
+        breakpoint: 772,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
   $(".event-slider").slick({
     infinite: true,
     slidesToShow: 3,
