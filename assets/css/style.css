@@ -358,6 +358,30 @@ html[dir=ltr] .tutor-section .tutor-slider .tutor-slider-item .tutor-slider-item
   color: white;
 }
 
+.magazen-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  margin-top: 40px;
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+}
+.magazen-section::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.magazen-section .prag {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 23px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  color: white;
+}
+
 .mission-section .min-box {
   padding: 24px;
   border-radius: 10px;
@@ -502,12 +526,12 @@ html[dir=ltr] .button-box a {
   background-color: #5f5f61;
 }
 
-.intro-section {
+.inner-intro-section {
   padding: 60px 0;
   background-image: url("../img/bg-img.png");
   text-align: center;
 }
-.intro-section .title {
+.inner-intro-section .title {
   font-size: 32px;
   font-weight: 700;
   color: #fff;

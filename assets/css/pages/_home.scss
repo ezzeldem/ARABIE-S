@@ -12,7 +12,6 @@
   }
 }
 
-
 .register-section {
   padding: 60px 0;
   background-color: rgba($color-secondary, 0.1);
@@ -141,5 +140,25 @@
         }
       }
     }
+  }
+}
+
+.magazen-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  margin-top: 40px;
+  padding: 60px 0;
+  @include after("") {
+    inset: 0;
+    z-index: -1;
+    background-color: rgba($color-black, 0.6);
+  }
+  .prag {
+    text-align: center;
+    line-height: 1.7;
+    font-size: 23px;
+    font-family: "Baloo Bhaijaan 2", cursive;
+    color: rgba($color-white, 1);
   }
 }
