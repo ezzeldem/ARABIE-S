@@ -162,3 +162,34 @@
     color: rgba($color-white, 1);
   }
 }
+
+@include media(992) {
+  .intro-section {
+    .intro-content {
+      text-align: center;
+      .button-box {
+        a {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .magazen-section {
+    .prag {
+      font-size: 16px;
+    }
+  }
+}
+
+@include media(772) {
+  .intro-section {
+    .intro-content {
+      .title {
+        font-size: 40px;
+      }
+      .prag {
+        font-size: 20px;
+      }
+    }
+  }
+}

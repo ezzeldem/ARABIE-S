@@ -71,3 +71,14 @@
     }
   }
 }
+
+@include media(772) {
+  .copy-right-footer {
+    .prag {
+      text-align: center;
+    }
+    ul{
+      justify-content: center;
+    }
+  }
+}

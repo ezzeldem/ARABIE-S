@@ -12,3 +12,9 @@
 .section-margin {
   margin: 20px 0;
 }
+
+@include media(992) {
+  .order-mobile-1 {
+    order: -1;
+  }
+}

@@ -101,3 +101,34 @@
     }
   }
 }
+
+@include media(992) {
+  .header-section {
+    .nav-box ul {
+      display: none;
+    }
+  }
+}
+@include media(772) {
+  .menu-content{
+    width: 220px;
+  }
+  .header-section {
+    .logo-box {
+      a {
+        img {
+          height: unset;
+        }
+      }
+    }
+    .nav-box ul {
+      display: none;
+    }
+    .button-box {
+      a {
+        font-size: 13px;
+        padding: 9px 15px;
+      }
+    }
+  }
+}
