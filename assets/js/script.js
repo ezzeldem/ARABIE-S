@@ -5,8 +5,16 @@ $(document).ready(function () {
     var dir_lang = false;
   }
 
-  $(".header-section .nav-box .menu-box i").click(function () {
+  $("body").click(function () {
+    $(".menu-content").removeClass("open");
+  });
+
+  $(".header-section .nav-box .menu-box i").click(function (e) {
+    e.stopPropagation();
     $(".menu-content").addClass("open");
+  });
+  $(".menu-content ").click(function (e) {
+    e.stopPropagation();
   });
   $(".menu-content .close-link h4").click(function () {
     $(".menu-content").removeClass("open");
